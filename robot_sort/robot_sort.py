@@ -97,14 +97,21 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
+        self.swap_item() #swap from None to position 0?
+        print("item",self._item)
+        print("pos", self._position)
         #bubble sort?
         self.set_light_on()
-        print("light",self._light)
-        while self._light == "ON":
-            self._light == "OFF"
+        while self.light_is_on():
+            self.set_light_off()
+            if self.can_move_right():
+                self.move_right()
+                print("pos2", self._position)
+            for p in range(1, len(l)-1):
+                pass
+                # print(l[p])
+
             #start at position 0
-            for item in range(0, len(l)-1):
-                self._item = item
                 #compare items of pos[n] and pos[n+1]
                     #if compare items pos[n] > pos[n+1] returns 1, swap items and turn light on
                 
