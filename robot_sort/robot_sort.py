@@ -97,8 +97,21 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
-        pass
+        #bubble sort?
+        self.set_light_on()
+        print("light",self._light)
+        while self._light == "ON":
+            self._light == "OFF"
+            #start at position 0
+            for item in range(0, len(l)-1):
+                self._item = item
+                #compare items of pos[n] and pos[n+1]
+                    #if compare items pos[n] > pos[n+1] returns 1, swap items and turn light on
+                
 
+        
+        return l
+    
 
 if __name__ == "__main__":
     # Test our your implementation from the command line
